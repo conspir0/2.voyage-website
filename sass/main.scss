@@ -1,4 +1,5 @@
 @import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
@@ -21,7 +22,7 @@ h1, h2, h3 {
     &.lg-heading {
         font-size: 6rem;
     }
-    &.sm-heading{
+    &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
         background: rgba(lighten($primary-color, 2), 0.3);
