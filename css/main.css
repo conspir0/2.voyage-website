@@ -252,6 +252,45 @@ main#home h1 {
   text-align: justify;
 }
 
+.vlogs {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.vlogs img {
+  width: 100%;
+  border: 3px #fff solid;
+}
+
+.vlogs img:hover {
+  opacity: 0.5;
+  border-color: #eece1a;
+  transition: all 0.5s ease-out;
+}
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: #eece1a;
+  color: #000;
+}
+
+.btn-dark {
+  background: black;
+  color: #fff;
+}
+
+.btn-light {
+  background: #b4bac8;
+  color: #333;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -262,6 +301,18 @@ main#home h1 {
 
 #main-footer a:hover {
   color: #eece1a;
+}
+
+@media screen and (min-width: 1171px) {
+  .vlogs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .vlogs {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -303,11 +354,17 @@ main#home h1 {
   .about-info .description-image {
     width: 100%;
   }
+  .vlogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 500px) {
   main#home h1.lg-heading {
     margin-top: 10vh;
+  }
+  .vlogs {
+    grid-template-columns: 1fr;
   }
 }
 

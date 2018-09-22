@@ -1,11 +1,15 @@
 // Widescreens
 @include mediaXl {
-    
+    .vlogs {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 // Desktops & laptops
 @include mediaLg {
-    
+    .vlogs {
+        grid-template-columns: repeat(3, 1fr);
+    }  
 }
 
 // Tablets & small laptops
@@ -51,6 +55,9 @@
             width: 100%;
         }
     }
+    .vlogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // Smarthphones
@@ -59,5 +66,8 @@
         h1.lg-heading {
             margin-top: 10vh;
         }
+    }
+    .vlogs {
+        grid-template-columns: 1fr;
     }
 }
