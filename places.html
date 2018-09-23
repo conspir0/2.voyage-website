@@ -7,6 +7,8 @@
     <meta name="description" content="This is my third project. This website has been created to consolidate my knowledge.">
     <meta name="keywords" content="single page, layout, minimalism, voyage, HTML, CSS, RWD">
     <title>Secret Places</title>
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="vendor/flickity.min.css">
     <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -43,7 +45,7 @@
         <h1 class="lg-heading">Secret <span class="text-secondary">Places</span></h1>
         <h2 class="sm-heading">Let me show something...</h2>
         <div class="about-info">
-            <img src="images/image/image-1.jpeg" alt="Volcano" class="description-image">
+            <div class="main-carousel" id="lolek"></div>
             <div class="description">
                 <h3 class="text-secondary">FEW WORDS ABOUT...</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem tenetur quod facere autem corrupti fugit suscipit quos non nobis atque, vitae iusto, sunt delectus voluptate vero aliquam? Maiores, consectetur, voluptatum!</p>
@@ -56,7 +58,7 @@
             <div class="description-sm map">
                 <h3>Map</h3>
                 <h6>Look where you can find this place</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi optio error, laudantium at facilis architecto voluptas mollitia sint. Atque quibusdam necessitatibus alias repellendus asperiores temporibus nihil accusantium maiores reiciendis quia.</p>
+                <div id="map"></div>
             </div>
         </div>
     </main>
@@ -64,6 +66,15 @@
         Copyright &copy; 2018 by <a href="https://github.com/conspir0" target="_blank">conspir0</a>
     </footer>
     
+    <script id="carouselSlide" type="x-tmpl-mustache">
+        <div class="carousel-cell">
+            <p>{{{ description }}}</p>
+        </div>
+    </script>
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/hash.js"></script>
+    <script src="vendor/mustache.min.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDWwp15e0y5Cg9JhCw5EK54YRFtwjyq4&callback=initMap"></script>
 </body>
 </html>
