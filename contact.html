@@ -6,12 +6,13 @@
     <meta name="author" content="Mateusz Michalczyk">
     <meta name="description" content="This is my third project. This website has been created to consolidate my knowledge.">
     <meta name="keywords" content="single page, layout, minimalism, voyage, HTML, CSS, RWD">
-    <title>Welcome to the Jungle!</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>Contact</title>
+    <link rel="stylesheet" href="vendor/normalize.css">
+    <link rel="stylesheet" href="vendor/flickity.min.css">
     <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body id="bg-img">
+<body>
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -24,10 +25,10 @@
                 </div>
             </div>
             <ul class="menu-nav">
-                <li class="nav-item current">
+                <li class="nav-item">
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item current">
                     <a href="places.html" class="nav-link">Secret Places</a>
                 </li>
                 <li class="nav-item">
@@ -40,17 +41,34 @@
         </nav>
     </header>
     
-    <main id="home">
-        <h1 class="lg-heading">Wild <span class="text-secondary">World</span></h1>
-        <h2 class="sm-heading">Welcome to the Jungle! Let's explore the most incredible places!</h2>
-        <div class="icons">
-            <a href="#!"><i class="fab fa-facebook fa-2x"></i></a>
-            <a href="#!"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#!"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#!"><i class="fab fa-github fa-2x"></i></a>
+    <main id="places">
+        <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
+        <h2 class="sm-heading">This is how you can reach me...</h2>
+        <div class="boxes">
+            <div>
+                <span class="text-secondary">Email: </span>mateusz_michalczyk@hotmail.com
+            </div>
+            <div>
+                <span class="text-secondary">Phone: </span>+48 662-056-370
+            </div>
+            <div>
+                <span class="text-secondary">Adress: </span>Warsaw, Poland
+            </div>
         </div>
     </main>
+    <footer id="main-footer">
+        Copyright &copy; 2018 by <a href="https://github.com/conspir0" target="_blank">conspir0</a>
+    </footer>
     
+    <script id="carouselSlide" type="x-tmpl-mustache">
+        <div class="carousel-cell">
+            <p>{{{ description }}}</p>
+        </div>
+    </script>
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/hash.js"></script>
+    <script src="vendor/mustache.min.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEDWwp15e0y5Cg9JhCw5EK54YRFtwjyq4&callback=initMap"></script>
 </body>
 </html>
